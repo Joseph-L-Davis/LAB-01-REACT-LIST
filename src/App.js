@@ -1,9 +1,9 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
 import List from './List';
 import Footer from './Footer';
+import sauces from './sauces';
 import './App.css';
-import React from 'react';
 
 class App extends Component {
 
@@ -13,7 +13,7 @@ class App extends Component {
   
         <Header/>
         <main>
-          <List/>
+          <List sauces = {sauces}/>
         </main>
         <Footer/>
       
