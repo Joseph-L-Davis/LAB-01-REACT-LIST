@@ -4,4 +4,5 @@
   height: 100vh;
   background: lightgreen;
   font-family: 'New Tegomin', serif;
+  overflow: auto;
 }

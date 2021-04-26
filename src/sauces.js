@@ -6,8 +6,8 @@ const sauces = [
     url: 'sauces/aardvark.jpg'
   },
   {
-    name: 'Zombie Apocalypse',
-    location: 'Pennsylvania.',
+    name: 'Apocalypse',
+    location: 'Pennsylvania',
     scoville: '500,000',
     url: 'sauces/zombie.jpg'
   },
@@ -25,7 +25,7 @@ const sauces = [
   },
   {
     name: 'Mad Dog 357',
-    location: 'Massachusett',
+    location: 'Massachusetts',
     scoville: '357,000',
     url: 'sauces/maddog.jpg'
   },
