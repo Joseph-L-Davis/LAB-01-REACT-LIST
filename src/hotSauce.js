@@ -1,4 +1,4 @@
-const hotSauces = [
+const sauces = [
   {
     name: 'Aardvark',
     location: 'Oregon',
@@ -30,3 +30,5 @@ const hotSauces = [
     url: 'src/Assets/maddog.jpg'
   },
 ];
+
+export default sauces;

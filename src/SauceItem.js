@@ -7,9 +7,11 @@ class SauceItem extends Component {
     const sauce = this.props.sauce;
 
     return (
-        
       <li className='SauceItem'>
-        <h2> {sauce.name} </h2>
+        <h2>Aardvark</h2>
+        <img url='Assets/aardvark.jpg' alt='Aardvark'/>
+        <p className='scoville'>5,000</p>
+        <p className='location'>Oregon</p>
       </li>
     );
   }
