@@ -8,7 +8,7 @@ class SauceItem extends Component {
     return (
       <li className='SauceItem'>
         <h2>Aardvark</h2>
-        <img src="./Assets/aardvark.jpg" alt='Aardvark'/>
+        <img src="Assets/aardvark.jpg" alt='Aardvark'/>
         <p className='scoville'>Scoville: 5,000</p>
         <p className='location'>Oregon</p>
       </li>

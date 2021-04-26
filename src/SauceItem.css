@@ -11,4 +11,6 @@ li {
 
 img {
     object-fit: contain;
+    width: 200px;
+    height: 150px;
 }
