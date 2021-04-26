@@ -4,8 +4,6 @@ import './List.css';
 
 class List extends Component {
   render() {
-    const sauces = this.props.sauces;
-    
     return (
       <ul>
         <SauceItem/>

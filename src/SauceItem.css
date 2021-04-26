@@ -1,0 +1,14 @@
+li {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    border: 1px solid red;
+    width: fit-content;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+    /* list-style: none; */
+}
+
+img {
+    object-fit: contain;
+}
