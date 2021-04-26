@@ -1,0 +1,21 @@
+.Header {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    padding: 10px;
+    grid-gap: 10px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background: lightcoral;
+}
+
+.Header h1 {
+    grid-column-start: 2;
+    display: grid;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.Header .logo {
+    width: 100%;
+}
