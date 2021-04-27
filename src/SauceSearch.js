@@ -23,7 +23,7 @@ export default class SauceSearch extends Component {
     }
 
     render() {
-      const { nameFilter, sortField, locationFilter } = this.state;
+      const { nameFilter, sortField } = this.state;
 
       return (
         <form className="SauceSearch" onSubmit={this.handleSubmit}> 
