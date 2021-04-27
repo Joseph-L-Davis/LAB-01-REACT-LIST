@@ -3,6 +3,7 @@ import Header from './Header';
 import List from './List';
 import Footer from './Footer';
 import sauces from './sauces';
+import SauceSearch from './SauceSearch';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         <Header/>
         <main>
           <List sauces = {sauces}/>
+          <SauceSearch/>
         </main>
         <Footer/>
       
