@@ -3,20 +3,44 @@ import './SauceSearch.css';
 
 export default class SauceSearch extends Component {
   
-  render() {
-    return (
-      <form className="SauceSearch">
+    state = { nameFilter: '', sortField: '' }
 
-        <input/>
+    handleNameFilter = ({ target }) => {
+      this.setState({ nameFilter: target.value });
+    }
 
-        <select>
-          <option value='name'>By Name</option>
-          <option value='location'>By Region</option>
-        </select>
+    handleSortField = ({ target }) => {
+      this.setState({ sortField: target.value });
+    }
 
-        <button>Search</button>
-      </form>
-    );
-  }
+    handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(this.state);
+    }
+
+    render() {
+      const { nameFilter, sortField } = this.state;
+
+      return (
+        <form className="SauceSearch" onSubmit={this.handleSubmit}> 
+          
+          <input name='nameFilter'
+            value={nameFilter}
+            onChange={ this.handleNameFilter }
+          />
+
+          <select name='sortField' 
+            value={sortField}
+            onChange={ this.handleSortField }>
+
+            <option value='name'>By Name</option>
+            <option value='location'>By Region</option>
+
+          </select>
+
+          <button>Search</button>
+        </form>
+      );
+    }
 
 }
