@@ -14,8 +14,9 @@ class App extends Component {
   
         <Header/>
         <main>
-          <List sauces = {sauces}/>
           <SauceSearch/>
+        
+          <List sauces = {sauces}/>
         </main>
         <Footer/>
       

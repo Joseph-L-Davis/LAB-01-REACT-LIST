@@ -6,7 +6,15 @@ export default class SauceSearch extends Component {
   render() {
     return (
       <form className="SauceSearch">
-        <button>Click here</button>
+
+        <input/>
+
+        <select>
+          <option value='name'>By Name</option>
+          <option value='location'>By Region</option>
+        </select>
+
+        <button>Search</button>
       </form>
     );
   }
