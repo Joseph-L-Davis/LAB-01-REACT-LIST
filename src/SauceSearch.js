@@ -3,10 +3,14 @@ import './SauceSearch.css';
 
 export default class SauceSearch extends Component {
   
-    state = { nameFilter: '', sortField: '' }
+    state = { nameFilter: '', sortField: '', locationFilter: '' }
 
     handleNameFilter = ({ target }) => {
       this.setState({ nameFilter: target.value });
+    }
+
+    handleLocationFilter = ({ target }) => {
+      this.setState({ locationFilter: target.value });
     }
 
     handleSortField = ({ target }) => {
@@ -15,11 +19,11 @@ export default class SauceSearch extends Component {
 
     handleSubmit = (e) => {
       e.preventDefault();
-      console.log(this.state);
+      this.props.onSearch(this.state);
     }
 
     render() {
-      const { nameFilter, sortField } = this.state;
+      const { nameFilter, sortField, locationFilter } = this.state;
 
       return (
         <form className="SauceSearch" onSubmit={this.handleSubmit}> 
@@ -33,6 +37,7 @@ export default class SauceSearch extends Component {
             value={sortField}
             onChange={ this.handleSortField }>
 
+            <option value=''>Sort By...</option>
             <option value='name'>By Name</option>
             <option value='location'>By Region</option>
 
