@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
+import request from 'superagent';
 import Header from './Header';
 import List from './List';
 import Footer from './Footer';
-import sauces from './sauces';
 import SauceSearch from './SauceSearch';
 import './App.css';
 
 class App extends Component {
 
 state = {
-  sauces: sauces
+  sauces: []
 }
 
-  handleSearch = ({ nameFilter, sortField, locationFilter })=> {
+componentDidMount() {
+  this.handleSearch({});
+}
+
+  handleSearch = async ({ nameFilter, sortField, locationFilter })=> {
     const nameRegex = new RegExp(nameFilter, 'i');
-    const newSauces = sauces
+    const response = await request.get('https://hot-sauces-2.herokuapp.com/api/sauces');
+    const newSauces = response.body
       .filter(sauce => {
         return !nameFilter || sauce.name.match(nameRegex);
       })
